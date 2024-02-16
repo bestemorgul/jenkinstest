@@ -4,21 +4,21 @@ pipeline
   stages {
     stage('version') {
       steps {
-       sudo sh 'python --version'
+       bat 'python --version'
       }
     }
      stage('build') {
       steps {
         script{
-          sh 'python -m pip install --upgrade pip'
-          sh 'pip install -r requirements.txt'
+          bat 'python -m pip install --upgrade pip'
+          bat 'pip install -r requirements.txt'
         }
-        sh 'python --version'
+        bat 'python --version'
       }
     }
     stage('hello') {
       steps {
-        sh 'python script.py'
+        bat 'python script.py'
       }
     }
   }
