@@ -4,7 +4,7 @@ pipeline
   stages {
     stage('version') {
       steps {
-       bat 'py -3 --version'
+       bat 'py -2 --version'
       }
     }
      stage('build') {
