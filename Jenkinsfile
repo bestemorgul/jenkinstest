@@ -4,6 +4,7 @@ pipeline
   stages {
     stage('version') {
       steps {
+        scoop install python
         bat 'py -3.12.0 --version'
       }
     }
