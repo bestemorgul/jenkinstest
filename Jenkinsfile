@@ -4,7 +4,7 @@
   stages {
     stage('version') {
       steps {
-       echo 123123
+       echo '123123'
        bat 'py -3 --version'
       }
     }
