@@ -4,8 +4,8 @@
   stages {
     stage('version') {
       steps {
-       echo $PYTHONPATH
-       bat 'py -0 --version'
+       echo 123123
+       bat 'py -3 --version'
       }
     }
      stage('build') {
