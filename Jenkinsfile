@@ -1,10 +1,10 @@
-pipeline
+  pipeline
 {
   agent any
   stages {
     stage('version') {
       steps {
-       pip install -e ./nodepy
+       echo $PYTHONPATH
        bat 'py -0 --version'
       }
     }
