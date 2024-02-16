@@ -5,7 +5,7 @@
     stage('version') {
       steps {
        echo '123123'
-       bat 'py -3 --version'
+       bat 'py -3.8 -m --version'
       }
     }
      stage('build') {
