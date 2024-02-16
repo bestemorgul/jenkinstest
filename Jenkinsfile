@@ -5,7 +5,8 @@
     stage('version') {
       steps {
        echo '123123'
-       bash 'py -3.12.0 --version'
+             bat 'python3 -m pip install --upgrade pip'
+       bat 'py -3.12 --version'
       }
     }
      stage('build') {
