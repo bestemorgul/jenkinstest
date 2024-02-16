@@ -4,6 +4,7 @@ pipeline
   stages {
     stage('version') {
       steps {
+       pip install -e ./nodepy
        bat 'py -0 --version'
       }
     }
