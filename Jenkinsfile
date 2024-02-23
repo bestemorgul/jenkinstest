@@ -4,21 +4,21 @@ pipeline
   stages {
     stage('version') {
       steps {
-        bat 'py -3.12.0 --version'
+        sh 'python3 --version'
       }
     }
      stage('build') {
       steps {
         script{
-          bat 'python3 -m pip install --upgrade pip'
-          bat 'pip3 install -r requirements.txt'
+          sh 'python3 -m pip install --upgrade pip'
+          sh 'pip3 install -r requirements.txt'
         }
-        bat 'python3 --version'
+        sh 'python3 --version'
       }
     }
     stage('hello') {
       steps {
-        bat 'python3 script.py'
+        sh 'python3 script.py'
       }
     }
   }
