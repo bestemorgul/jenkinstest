@@ -1,4 +1,4 @@
-pipeline
+ipeline
 {
   agent any
   stages {
@@ -21,5 +21,4 @@ pipeline
         sh 'python3 script.py'
       }
     }
-  }
   }
