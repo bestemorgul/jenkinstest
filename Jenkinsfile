@@ -11,7 +11,7 @@ pipeline
       steps {
         script{
           sh 'python3 -m pip install --upgrade pip'
-          sh 'pip3 install -r requirements.txt'
+          sh 'pip install -r requirements.txt'
         }
         sh 'python3 --version'
       }
