@@ -4,8 +4,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
 
-executable_path= '/home/bestemorgul/chromedriver'
-driver = webdriver.Chrome(executable_path=executable_path)
+driver = webdriver.Chrome('/home/bestemorgul/chromedriver')
 
 try:
     # Google'a gidin
