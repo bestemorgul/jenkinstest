@@ -1,11 +1,9 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
-s = Service('/home/bestemorgul/chromedriver')
-driver=webdriver.Chrome(service=s)
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 try:
     # Google'a gidin
