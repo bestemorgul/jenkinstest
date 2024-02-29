@@ -3,13 +3,13 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
-options = webdriver.ChromeOptions()
-options.add_argument("--headless")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-extensions")
 
-options.add_argument(r"--user-data-dir=/home/luiz/.config/google-chrome/")
-options.add_argument(r'--profile-directory=Default')
+option = webdriver.ChromeOptions()
+        option.add_argument('--disable-notifications')
+        option.add_argument('--allow-running-insecure-content')
+        option.add_argument('--headless')
+        option.add_argument("--remote-debugging-port=9222")
+        option.add_argument("window-size=1280x800")
 driver = webdriver.Chrome(options=options)
 
 
