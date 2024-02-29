@@ -3,8 +3,7 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
-
-driver = webdriver.Chrome('/home/bestemorgul/chromedriver')
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 try:
     # Google'a gidin
