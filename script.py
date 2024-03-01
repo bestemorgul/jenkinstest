@@ -3,7 +3,7 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
-option = webdriver.ChromeOptions()
+option = Options()
 option.add_argument('disable-notifications')
 option.add_argument('allow-running-insecure-content')
 option.add_argument('headless')
@@ -11,7 +11,9 @@ option.add_argument("remote-debugging-port=9222")
 option.add_argument("window-size=1280x800")
 option.add_argument('no-sandbox')
 option.add_argument('disable-gpu')
-driver = webdriver.Chrome(options=option)
+option.headless=True
+
+driver = webdriver.Chrome("/home/bestemorgul/chromedriver", options=option)
 
 try:
     # Google'a gidin
